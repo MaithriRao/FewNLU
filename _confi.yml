@@ -1,0 +1,8 @@
+# Site settings
+title: Blog post
+author:
+  name: Kavu Maithri Rao
+description: "Blog post about paper FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding"
+
+# Build settings
+remote_theme: jekyll/minima
