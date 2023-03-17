@@ -2,8 +2,11 @@
 layout: home 
 ---
 
-This blog post includes examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
+This blog post [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding] ([https://arxiv.org/pdf/1712.07628.pdf](https://arxiv.org/pdf/2109.12742.pdf). 
 
-Before that we will see some introduction to how few shot learning came into pictur
+# Goal of this post 
+This includes examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
+
+# What is few shot learning?
 
 
