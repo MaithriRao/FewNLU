@@ -12,7 +12,7 @@ This includes examples of several state-of-the-art techniques and data processin
 
 Pre-trained models have been demonstrated to generalize well to new tasks in a given domain or modality. A machine learning framework called Few-Shot learning(FSL) enables a pre-trained model to generalize over new types of data(data that pre-trained model has not seen during training) using only fewer labeled samples. This comes under the category of meta learing.
 
-#Why Few-Shot learning?
+# Why Few-Shot learning?
 
 The process of collecting, annotating and validating the large amount of data is very expensive. And also there are times businesses do not have access to huge data and must depend on a small number of samples to produce the results. 
 Few-Shot learning resolves the above mentioned problems in the following ways.
@@ -24,11 +24,11 @@ Few-Shot learning resolves the above mentioned problems in the following ways.
 Some of the applications of few-shot learning are in the task of computer vision such as image classification, object and character recognition etc and also in the field of natural language processing in the task of translation, sentence completion, word similarity etc and also in the field of Robotics and audio processing and also Healthcare.
 Prompting, popularized by GPT-3, has surfaced as a viable alternative input format for NLP models. Prompts typically include a pattern that asks the model to make a certain prediction and a verbalizer that converts the prediction to a class label. Many methods, including PET, iPET, and AdaPET, leverage prompts for few-shot learning.
 
-#Why Benchmarking?
+# Why Benchmarking?
 
 Benchmarking and evaluation are the backbones of scientific advancement in machine learning and natural language processing. It is impossible to make genuine progress or avoid overfitting to established datasets and metrics without precise and reliable benchmarks. New evaluation procedures have been developed in order to compare models reliably in a few-shot setting.
 
-#Outline of this post
+# Outline of this post
 
 The problem with the existing evaluation protocol method
 Background
