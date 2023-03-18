@@ -49,7 +49,7 @@ The new data split strategy called Multi-Splits(MS), here the labeled data set i
 
 
 <p align="center">
-  ![Screenshot](Desiderata.png)
+  (Desiderata.png)
 </p>
 Enseml<sub>emm</sub>
 
