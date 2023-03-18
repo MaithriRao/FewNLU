@@ -47,6 +47,7 @@ Stability with respect to number of runs K: Choosing the value of K should have 
 
 The new data split strategy called Multi-Splits(MS), here the labeled data set is randomly divided into training and development sets using a fixed split ratio r. MS is compared with the existing data split strategies such as K-fold cross validation (CV), minimum description length (MDL), and bagging (BAG), random sampling (RAND) and model-informed splitting (MI). 
 
+![Screenshot](Desiderata.png)
 Enseml<sub>emm</sub>
 
 
