@@ -9,9 +9,11 @@ This blog post [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natur
 This includes examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
 
 # What is few shot learning?
+
 Pre-trained models have been demonstrated to generalize well to new tasks in a given domain or modality. A machine learning framework called Few-Shot learning(FSL) enables a pre-trained model to generalize over new types of data(data that pre-trained model has not seen during training) using only fewer labeled samples. This comes under the category of meta learing.
 
 #Why Few-Shot learning?
+
 The process of collecting, annotating and validating the large amount of data is very expensive. And also there are times businesses do not have access to huge data and must depend on a small number of samples to produce the results. 
 Few-Shot learning resolves the above mentioned problems in the following ways.
 1. Concern of huge numbers of data is eliminated by generalizing only a few labeled samples.
@@ -23,9 +25,11 @@ Some of the applications of few-shot learning are in the task of computer vision
 Prompting, popularized by GPT-3, has surfaced as a viable alternative input format for NLP models. Prompts typically include a pattern that asks the model to make a certain prediction and a verbalizer that converts the prediction to a class label. Many methods, including PET, iPET, and AdaPET, leverage prompts for few-shot learning.
 
 #Why Benchmarking?
+
 Benchmarking and evaluation are the backbones of scientific advancement in machine learning and natural language processing. It is impossible to make genuine progress or avoid overfitting to established datasets and metrics without precise and reliable benchmarks. New evaluation procedures have been developed in order to compare models reliably in a few-shot setting.
 
-Outline of this post
+#Outline of this post
+
 The problem with the existing evaluation protocol method
 Background
 Proposed
