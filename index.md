@@ -30,7 +30,7 @@ Benchmarking and evaluation are the backbones of scientific advancement in machi
 
 # Outline of this post
 
-1. **The problem with the existing evaluation protocol method**
+1. **The problem with the existing evaluation method**
 2. **Background**
 3. **Proposed method**
 4. **Results and analysis**
@@ -56,7 +56,8 @@ The new data split strategy called Multi-Splits(MS), here the labeled data set i
 
 Evaluation of different data split strategies are performed on the FewGLUE benchmark. In the paper the authors have assessed approaches based on the frequently applied prompt-based few-shot PET method taking DeBERTa as the base model.  Throughout the experiment learning rate, evaluation ratio, prompt pattern and maximum training step, hyperparameters are considered and are run on the same set of tasks. 
 
-Test Performance and correlation:
+*Test Performance and correlation:*
+
 Multi splits outperforms all other existing data split strategies in terms of average test performance and as well as average correlation. 
 Multi-Splits with the  fewer labeled training  samples, performs better than both CV and MDL having more training data. At the same time CV and MDL with fewer validation data has a poor correlation compared to Multi-Splits having more validation data. Hence it is proved that selection of models plays an important role in achieving the best performance than the number of training data.
 
@@ -64,7 +65,7 @@ Duplicating the training data has an adverse effect on the test performance. Tho
 
 Comparing RAND to MS, both have the same number of train and development data data, but still MS outperforms RAND. This is again due to the fact that there can be duplication of data and this causes the model to memorize the data too well, achieving poor test performance. At the same time MI also suffers from overfitting.
 
-Stability w.r.t. the number of runs K
+*Stability w.r.t. the number of runs K*
 
 The performance and correlation of Multi-Splits(blue lines) is the most stable while other strategies CV and MDL are more susceptible to the selection of  K. This is mainly due to the fact that Multi-Splits depicts strategies with a fixed ratio and an independent K while both CV and MDL both represent strategies whose number of runs are correlated with the size of the data split. On both BoolQ and RTE, Multi-Splits has the lowest variance across various runs. Although MS has a high variance when K = 2, the variance decreases as K increases, whereas CV and MDL have increasing or unstable variance.
 Increasing K has no effect on the number of Multi-Split training and development examples; instead, it increases the confidence in the results. So for Multi-Split, one can always choose to increase the value of K to obtain lower variance. However, for CV and MDL, the sizes of training and development sets are influenced by K, with excessively large K values resulting in a failure mode and extremely small K values resulting in unstable results. Hence it is hard to decide which value of K to choose in advance. All experiments are performed with 64 labeled samples.
@@ -79,10 +80,10 @@ Finding 3: The benefits of various methods are largely complementary. Combining 
 
 Finding 4: No single few-shot method dominates most NLU tasks. This emphasizes the importance of developing few-shot methods with more consistent and robust performance across tasks.
 
-# FewNLU Toolkit:
-FewNLU, an integrated toolkit developed for few-shot NLU, is made available to the public. It consists of implementations of state-of-the-art few-shot methods, data utilities, a standardized few-shot training framework, and proposed evaluation framework.
+**FewNLU Toolkit:**
+FewNLU is an integrated toolkit developed for few-shot NLU and is made available to the public. It consists of implementations of state-of-the-art few-shot methods, data utilities, a standardized few-shot training framework, and proposed evaluation framework.
 
-# Future Work:
+**Future Work:**
 Fixed hyper-parameters are not optimal and need to re-select them given new conditions. It is important for the community to iterate and converge on a common evaluation framework. The study of few-shot natural language generation might also be studied in a similar framework.
 
 # Problems of this paper:
@@ -91,5 +92,4 @@ According to Mosbach et al. (2021) longer training with lower learning rate and 
 Authors et.al proposed two ensemble models ENSEMBLE<sub>prediction</sub> and ENSEMBLE<sub>parameter</sub>. In ENSEMBLE<sub>prediction</sub>, ensembling the logits of different runs while in ENSEMBLE<sub>parameter</sub> the average parameters of different runs is taken. ENSEMBLEprediction and ENSEMBLEparameter both found to improve performance and stability.
 
 
-# REFERENCES
-
+# References
