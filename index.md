@@ -1,8 +1,5 @@
 ---
 layout: home
-title: FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding
-tags: [nlp, Few-shot learning]
-author: Kavu Maithri Rao
 ---
 
 This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). 
@@ -13,7 +10,7 @@ This includes examples of several state-of-the-art techniques and data processin
 
 # What is Few-Shot learning?
 
-Pre-trained models have been demonstrated to generalize well to new tasks in a given domain or modality. A machine learning framework called Few-Shot learning(FSL) enables a pre-trained model to generalize over new types of data(data that pre-trained model has not seen during training) using only fewer labeled samples. This comes under the category of meta learing.
+Pre-trained models have been demonstrated to generalize well to new tasks in a given domain or modality. A machine learning framework called Few-Shot learning(FSL) enables a pre-trained model to generalize over new types of data(data that a pre-trained model has not seen during training) using only fewer labeled samples. This comes under the category of meta learing.
 
 # Why Few-Shot learning?
 
