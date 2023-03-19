@@ -90,17 +90,17 @@ Authors et.al proposed two ensemble models ENSEMBLE<sub>prediction</sub> and ENS
 # References
 
 1. [Yanan Zheng, Jing Zhou, Yujie Qian, Ming Ding,Chonghua Liao, Li Jian, Ruslan Salakhutdinov, Jie Tang, Sebastian Ruder, and Zhilin Yang. 2022.
-FewNLU: Benchmarking state-of-the-art methods for few-shot natural language understanding. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics Dublin, Ireland. Association for Computational Linguistics.](https://arxiv.org/pdf/2109.12742.pdf).
+FewNLU: Benchmarking state-of-the-art methods for few-shot natural language understanding. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics Dublin, Ireland. Association for Computational Linguistics](https://arxiv.org/pdf/2109.12742.pdf).
 
-[Marius Mosbach, Maksym Andriushchenko, and Dietrich Klakow. 2021. On the stability of fine-tuning bert: Misconceptions, explanations, and strong baselines. In ICLR.](https://arxiv.org/pdf/2006.04884.pdf).
+2. [Marius Mosbach, Maksym Andriushchenko, and Dietrich Klakow. 2021. On the stability of fine-tuning bert: Misconceptions, explanations, and strong baselines. In ICLR](https://arxiv.org/pdf/2006.04884.pdf).
 
-[Timo Schick and Hinrich Schütze. 2021a. Exploiting cloze-questions for few-shot text classification and natural language inference. In EACL, pages 255–269. Association for Computational Linguistics.](https://arxiv.org/pdf/2001.07676.pdf).
+3. [Timo Schick and Hinrich Schütze. 2021a. Exploiting cloze-questions for few-shot text classification and natural language inference. In EACL, pages 255–269. Association for Computational Linguistics](https://arxiv.org/pdf/2001.07676.pdf).
 
-[Timo Schick and Hinrich Schütze. 2021b. It’s not just size that matters: Small language models are also few-shot learners. pages 2339–2352.](https://arxiv.org/pdf/2009.07118.pdf).
+4. [Timo Schick and Hinrich Schütze. 2021b. It’s not just size that matters: Small language models are also few-shot learners. pages 2339–2352](https://arxiv.org/pdf/2009.07118.pdf).
 
-[ML and NLP Research Highlights of 2021](https://www.ruder.io/ml-highlights-2021/).
+5. [ML and NLP Research Highlights of 2021](https://www.ruder.io/ml-highlights-2021/).
 
-[Everything you need to know about Few-Shot Learning.](https://blog.paperspace.com/few-shot-learning/).
+6. [Everything you need to know about Few-Shot Learning](https://blog.paperspace.com/few-shot-learning/).
 
-[What is Few-Shot Learning? Methods & Applications in 2023.](https://research.aimultiple.com/few-shot-learning/).
+7. [What is Few-Shot Learning? Methods & Applications in 2023](https://research.aimultiple.com/few-shot-learning/).
 
