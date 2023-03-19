@@ -66,7 +66,6 @@ The performance and correlation of Multi-Splits(blue lines) is the most stable w
 Increasing K has no effect on the number of Multi-Split training and development examples; instead, it increases the confidence in the results. So for Multi-Split, one can always choose to increase the value of K to obtain lower variance. However, for CV and MDL, the sizes of training and development sets are influenced by K, with excessively large K values resulting in a failure mode and extremely small K values resulting in unstable results. Hence it is hard to decide which value of K to choose in advance. All experiments are performed with 64 labeled samples.The above results have yielded four findings.
 
 ![screenshot](Desiderata.png)
-
 # Summary of Findings
 **Finding 1:** Compared to several baselines, the newly presented Multi-Splits is a more trustworthy approach with improvements in test performance, correlation between development and test sets, and stability relative to the number of runs. This proves that the proposed method can appropriately choose the hyper parameter based on the dev set without overfitting, and minimizing the impact of randomness as much as possible.
 
