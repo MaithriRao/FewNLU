@@ -1,15 +1,16 @@
----
-layout: default
-title: Blog post
----
+# Setup
+title:               The Blog Post
+tagline:             ''
+description:         'For short-term, peer-sourced tests of time, generalizations, specializations, reproductions, etc.!'
+url:                 https://maithrirao.github.io/FewNLU-Benchmarking-State-of-the-Art-Methods-for-Few-Shot-Natural-Language-Understanding
+baseurl:             ''
+paginate:            30
+permalink:           pretty
 
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      layout: "default"
 
-# Build settings
-remote_theme: jekyll/minima
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+paginate_path: "/blog/:num"
