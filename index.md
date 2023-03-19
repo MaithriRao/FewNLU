@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding
+title: FewNLU Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding
 authors: Kavu Maithri Rao
 tags: [natural-language-generation, reinforcement-learning, generative-models] #Learning from Demonstration]  # This should be the relevant areas related to your blog post
 ---
