@@ -65,7 +65,7 @@ Comparing RAND to MS, both have the same number of train and development data da
 The performance and correlation of Multi-Splits(blue lines) is the most stable while other strategies CV and MDL are more susceptible to the selection of  K. This is mainly due to the fact that Multi-Splits depicts strategies with a fixed ratio and an independent K while both CV and MDL both represent strategies whose number of runs are correlated with the size of the data split. On both BoolQ and RTE, Multi-Splits has the lowest variance across various runs. Although MS has a high variance when K = 2, the variance decreases as K increases, whereas CV and MDL have increasing or unstable variance.
 Increasing K has no effect on the number of Multi-Split training and development examples; instead, it increases the confidence in the results. So for Multi-Split, one can always choose to increase the value of K to obtain lower variance. However, for CV and MDL, the sizes of training and development sets are influenced by K, with excessively large K values resulting in a failure mode and extremely small K values resulting in unstable results. Hence it is hard to decide which value of K to choose in advance. All experiments are performed with 64 labeled samples.The above results have yielded four findings.
 
-[screenshot](Desiderata.png)
+![screenshot](Desiderata.png)
 
 # Summary of Findings
 **Finding 1:** Compared to several baselines, the newly presented Multi-Splits is a more trustworthy approach with improvements in test performance, correlation between development and test sets, and stability relative to the number of runs. This proves that the proposed method can appropriately choose the hyper parameter based on the dev set without overfitting, and minimizing the impact of randomness as much as possible.
@@ -90,5 +90,16 @@ Authors et.al proposed two ensemble models ENSEMBLE<sub>prediction</sub> and ENS
 
 # References
 
+[Yanan Zheng, Jing Zhou, Yujie Qian, Ming Ding,Chonghua Liao, Li Jian, Ruslan Salakhutdinov, Jie Tang, Sebastian Ruder, and Zhilin Yang. 2022.
+FewNLU: Benchmarking state-of-the-art methods for few-shot natural language understanding. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics Dublin, Ireland. Association for Computational Linguistics.](https://arxiv.org/pdf/2109.12742.pdf).
+
 [Marius Mosbach, Maksym Andriushchenko, and Dietrich Klakow. 2021. On the stability of fine-tuning bert: Misconceptions, explanations, and strong baselines. In ICLR.](https://arxiv.org/pdf/2006.04884.pdf).
+
+[Timo Schick and Hinrich Schütze. 2021b. It’s not just size that matters: Small language models are also few-shot learners. pages 2339–2352.](https://arxiv.org/pdf/2001.07676.pdf).
+
+[ML and NLP Research Highlights of 2021](https://www.ruder.io/ml-highlights-2021/).
+
+[Everything you need to know about Few-Shot Learning.](https://blog.paperspace.com/few-shot-learning/).
+
+[What is Few-Shot Learning? Methods & Applications in 2023.](https://research.aimultiple.com/few-shot-learning/).
 
