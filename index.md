@@ -1,8 +1,8 @@
 ---
 layout: home
-title: ICLR 2022 Blog Track (OLD)
-tags: [proposal, call]
-authors: Kavu Maithri Rao
+title: FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding
+tags: [nlp, Few-shot learning]
+author: Kavu Maithri Rao
 ---
 
 This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). 
