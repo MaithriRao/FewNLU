@@ -68,28 +68,27 @@ Comparing RAND to MS, both have the same number of train and development data da
 *Stability w.r.t. the number of runs K*
 
 The performance and correlation of Multi-Splits(blue lines) is the most stable while other strategies CV and MDL are more susceptible to the selection of  K. This is mainly due to the fact that Multi-Splits depicts strategies with a fixed ratio and an independent K while both CV and MDL both represent strategies whose number of runs are correlated with the size of the data split. On both BoolQ and RTE, Multi-Splits has the lowest variance across various runs. Although MS has a high variance when K = 2, the variance decreases as K increases, whereas CV and MDL have increasing or unstable variance.
-Increasing K has no effect on the number of Multi-Split training and development examples; instead, it increases the confidence in the results. So for Multi-Split, one can always choose to increase the value of K to obtain lower variance. However, for CV and MDL, the sizes of training and development sets are influenced by K, with excessively large K values resulting in a failure mode and extremely small K values resulting in unstable results. Hence it is hard to decide which value of K to choose in advance. All experiments are performed with 64 labeled samples.
+Increasing K has no effect on the number of Multi-Split training and development examples; instead, it increases the confidence in the results. So for Multi-Split, one can always choose to increase the value of K to obtain lower variance. However, for CV and MDL, the sizes of training and development sets are influenced by K, with excessively large K values resulting in a failure mode and extremely small K values resulting in unstable results. Hence it is hard to decide which value of K to choose in advance. All experiments are performed with 64 labeled samples.The above results have yielded four findings.
 
-The above results have yielded four findings.
-Finding 1: Compared to several baselines, the newly presented Multi-Splits is a more trustworthy approach with improvements in test performance, correlation between development and test sets, and stability relative to the number of runs. This proves that the proposed method can appropriately choose the hyper parameter based on the dev set without overfitting, and minimizing the impact of randomness as much as possible.
+# Summary of Findings:
+**Finding 1:** Compared to several baselines, the newly presented Multi-Splits is a more trustworthy approach with improvements in test performance, correlation between development and test sets, and stability relative to the number of runs. This proves that the proposed method can appropriately choose the hyper parameter based on the dev set without overfitting, and minimizing the impact of randomness as much as possible.
 
-Finding 2: It is observed that the benefits of some fes-shot methods(e.g., ADAPET) decrease on larger pretrained models like DeBERTa.
+**Finding 2:** It is observed that the benefits of some fes-shot methods(e.g., ADAPET) decrease on larger pretrained models like DeBERTa.
 Two types of the few shot methods are considered. The minimal few-shot method has access to a small labeled dataset and semi-supervised few-shot method has access to additional unlabeled dataset. Semi supervised few-shot methods(i.e., iPET and Noisy) generally improve 1-2 points on an average compared to minimal few shot methods.
 
-Finding 3: The benefits of various methods are largely complementary. Combining the methods outperforms individual methods and performs very close to a strongly supervised baseline on RoBERTa. However, there is still a significant difference between the best few-shot system and the fully-supervised system.
+**Finding 3:** The benefits of various methods are largely complementary. Combining the methods outperforms individual methods and performs very close to a strongly supervised baseline on RoBERTa. However, there is still a significant difference between the best few-shot system and the fully-supervised system.
 
-Finding 4: No single few-shot method dominates most NLU tasks. This emphasizes the importance of developing few-shot methods with more consistent and robust performance across tasks.
+**Finding 4:** No single few-shot method dominates most NLU tasks. This emphasizes the importance of developing few-shot methods with more consistent and robust performance across tasks.
 
-**FewNLU Toolkit:**
+*FewNLU Toolkit:*
 FewNLU is an integrated toolkit developed for few-shot NLU and is made available to the public. It consists of implementations of state-of-the-art few-shot methods, data utilities, a standardized few-shot training framework, and proposed evaluation framework.
 
-**Future Work:**
+# Conclusion
 Fixed hyper-parameters are not optimal and need to re-select them given new conditions. It is important for the community to iterate and converge on a common evaluation framework. The study of few-shot natural language generation might also be studied in a similar framework.
 
 # Problems of this paper:
 In recent years pretraining and fine tuning along with prompting is found to be the de facto solution to many of the few-shot nlp problems. The entire post is based on prompt based fine tuning. But few-shot prompt based fine tuning suffers from high variance across different training sets and different finetuning runs. Few-shot finetuning shows training instability,, but in a cross-validation scenario the experiments have different training sets. The entire blog post does not discuss how much instability comes from training vs. data selection. The author of the paper MEAL: Stable and Active Learning for Few-Shot Prompting  has shown that run instability is a serious issue in the few-shot classification proposed ensemble technique to improve run stability.
 According to Mosbach et al. (2021) longer training with lower learning rate and warmup enhances the stability of finetuning of PLM’s, and the main goal is to keep models out of suboptimal training loss regions. But, this is not true in few-shot prompt tuning because as the number of training examples is low finetuning achieves nearly zero training loss. It has also been demonstrated that while longer training reduces the standard deviation between different runs and also causes lower accuracy for the majority of tasks.
 Authors et.al proposed two ensemble models ENSEMBLE<sub>prediction</sub> and ENSEMBLE<sub>parameter</sub>. In ENSEMBLE<sub>prediction</sub>, ensembling the logits of different runs while in ENSEMBLE<sub>parameter</sub> the average parameters of different runs is taken. ENSEMBLEprediction and ENSEMBLEparameter both found to improve performance and stability.
-
 
 # References
