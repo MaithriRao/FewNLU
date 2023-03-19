@@ -8,7 +8,7 @@ This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods
 
 This includes examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
 
-# What is few shot learning?
+# What is Few-Shot learning?
 
 Pre-trained models have been demonstrated to generalize well to new tasks in a given domain or modality. A machine learning framework called Few-Shot learning(FSL) enables a pre-trained model to generalize over new types of data(data that pre-trained model has not seen during training) using only fewer labeled samples. This comes under the category of meta learing.
 
