@@ -47,12 +47,7 @@ Stability with respect to number of runs K: Choosing the value of K should have 
 
 The new data split strategy called Multi-Splits(MS), here the labeled data set is randomly divided into training and development sets using a fixed split ratio r. MS is compared with the existing data split strategies such as K-fold cross validation (CV), minimum description length (MDL), and bagging (BAG), random sampling (RAND) and model-informed splitting (MI). 
 
-
-<p align="center">
-  (Desiderata.png)
-</p>
-
-# Main Results and Analysis: 
+# Main Results and Analysis
 
 Evaluation of different data split strategies are performed on the FewGLUE benchmark. In the paper the authors have assessed approaches based on the frequently applied prompt-based few-shot PET method taking DeBERTa as the base model.  Throughout the experiment learning rate, evaluation ratio, prompt pattern and maximum training step, hyperparameters are considered and are run on the same set of tasks. 
 
@@ -65,12 +60,14 @@ Duplicating the training data has an adverse effect on the test performance. Tho
 
 Comparing RAND to MS, both have the same number of train and development data data, but still MS outperforms RAND. This is again due to the fact that there can be duplication of data and this causes the model to memorize the data too well, achieving poor test performance. At the same time MI also suffers from overfitting.
 
-*Stability w.r.t. the number of runs K*
+*Stability w.r.t. the number of runs K:*
 
 The performance and correlation of Multi-Splits(blue lines) is the most stable while other strategies CV and MDL are more susceptible to the selection of  K. This is mainly due to the fact that Multi-Splits depicts strategies with a fixed ratio and an independent K while both CV and MDL both represent strategies whose number of runs are correlated with the size of the data split. On both BoolQ and RTE, Multi-Splits has the lowest variance across various runs. Although MS has a high variance when K = 2, the variance decreases as K increases, whereas CV and MDL have increasing or unstable variance.
 Increasing K has no effect on the number of Multi-Split training and development examples; instead, it increases the confidence in the results. So for Multi-Split, one can always choose to increase the value of K to obtain lower variance. However, for CV and MDL, the sizes of training and development sets are influenced by K, with excessively large K values resulting in a failure mode and extremely small K values resulting in unstable results. Hence it is hard to decide which value of K to choose in advance. All experiments are performed with 64 labeled samples.The above results have yielded four findings.
 
-# Summary of Findings:
+[screenshot](Desiderata.png)
+
+# Summary of Findings
 **Finding 1:** Compared to several baselines, the newly presented Multi-Splits is a more trustworthy approach with improvements in test performance, correlation between development and test sets, and stability relative to the number of runs. This proves that the proposed method can appropriately choose the hyper parameter based on the dev set without overfitting, and minimizing the impact of randomness as much as possible.
 
 **Finding 2:** It is observed that the benefits of some fes-shot methods(e.g., ADAPET) decrease on larger pretrained models like DeBERTa.
@@ -86,9 +83,12 @@ FewNLU is an integrated toolkit developed for few-shot NLU and is made available
 # Conclusion
 Fixed hyper-parameters are not optimal and need to re-select them given new conditions. It is important for the community to iterate and converge on a common evaluation framework. The study of few-shot natural language generation might also be studied in a similar framework.
 
-# Problems of this paper:
+# Problems of this paper
 In recent years pretraining and fine tuning along with prompting is found to be the de facto solution to many of the few-shot nlp problems. The entire post is based on prompt based fine tuning. But few-shot prompt based fine tuning suffers from high variance across different training sets and different finetuning runs. Few-shot finetuning shows training instability,, but in a cross-validation scenario the experiments have different training sets. The entire blog post does not discuss how much instability comes from training vs. data selection. The author of the paper MEAL: Stable and Active Learning for Few-Shot Prompting  has shown that run instability is a serious issue in the few-shot classification proposed ensemble technique to improve run stability.
 According to Mosbach et al. (2021) longer training with lower learning rate and warmup enhances the stability of finetuning of PLM’s, and the main goal is to keep models out of suboptimal training loss regions. But, this is not true in few-shot prompt tuning because as the number of training examples is low finetuning achieves nearly zero training loss. It has also been demonstrated that while longer training reduces the standard deviation between different runs and also causes lower accuracy for the majority of tasks.
 Authors et.al proposed two ensemble models ENSEMBLE<sub>prediction</sub> and ENSEMBLE<sub>parameter</sub>. In ENSEMBLE<sub>prediction</sub>, ensembling the logits of different runs while in ENSEMBLE<sub>parameter</sub> the average parameters of different runs is taken. ENSEMBLEprediction and ENSEMBLEparameter both found to improve performance and stability.
 
 # References
+
+[Marius Mosbach, Maksym Andriushchenko, and Dietrich Klakow. 2021. On the stability of fine-tuning bert: Misconceptions, explanations, and strong baselines. In ICLR.](https://arxiv.org/pdf/2006.04884.pdf).
+
