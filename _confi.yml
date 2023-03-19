@@ -1,16 +1,9 @@
-# Setup
-title:               The Blog Post
-tagline:             ''
-description:         'For short-term, peer-sourced tests of time, generalizations, specializations, reproductions, etc.!'
-url:                 https://maithrirao.github.io/FewNLU-Benchmarking-State-of-the-Art-Methods-for-Few-Shot-Natural-Language-Understanding
-baseurl:             ''
-paginate:            30
-permalink:           pretty
+# Site settings
+title: New Blog Post
+author:
+  name: Kavu Maithri Rao
+  email: maithri@gmail.com
+description: ""
 
-
-
-# Gems
-plugins:
-  - jekyll-paginate
-
-paginate_path: "/blog/:num"
+# Build settings
+remote_theme: jekyll/minima
