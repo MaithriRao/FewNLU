@@ -6,7 +6,7 @@ tags: [natural-language-processing, Few-shot-learning] #Learning from Demonstrat
 ---
 **March 2023,**  **Kavu Maithri Rao**
 
-This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). 
+This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). The authors of the paper introduces an evaluation framework for few-shot NLU, and uses comprehensive experiments to justify the choices of data split construction and hyper-parameter search space formulation.
 
 ## Goal of this blog post: 
 The goal is to understand examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
@@ -53,7 +53,7 @@ In order to overcome this problem the authors [et.al[1]](https://arxiv.org/pdf/2
 
 *Stability with respect to number of runs K:* Choosing the value of K should have minimum effect on the above two metrics i.e. performance and correlation. This effect is discussed in the coming section with the graph of standard deviation on different sets of hyper parameters.
 
-The new data split strategy called Multi-Splits(MS), here the labeled data set is randomly divided into training and development sets using a fixed split ratio r. MS is compared with the existing data split strategies such as K-fold cross validation (CV), minimum description length (MDL), and bagging (BAG), random sampling (RAND) and model-informed splitting (MI). 
+The new data split strategy called Multi-Splits(MS), here the labeled data set is randomly divided into training and development sets using a fixed split ratio r. MS uses multiple data splits for a single dataset. It is hard to obtain multiple labeled datasets for a true few-shot problem then it can be formulated as a fully-supervised learning problem. MS is compared with the existing data split strategies such as K-fold cross validation (CV), minimum description length (MDL), and bagging (BAG), random sampling (RAND) and model-informed splitting (MI). 
 
 # Main Results and Analysis
 
@@ -78,7 +78,7 @@ Increasing K has no effect on the number of Multi-Split training and development
 **Finding 1:** Compared to several baselines, the newly presented Multi-Splits is a more trustworthy approach with improvements in test performance, correlation between development and test sets, and stability relative to the number of runs. This proves that the proposed method can appropriately choose the hyper parameter based on the development set without overfitting, and minimizing the impact of randomness as much as possible.
 
 **Finding 2:** It is observed that the benefits of some few-shot methods(e.g., ADAPET) decreases on larger pretrained models like DeBERTa.
-Two types of the few-shot methods are considered. The minimal few-shot method has access to a small labeled dataset and semi-supervised few-shot method has access to additional unlabeled dataset. Semi supervised few-shot methods(i.e., iPET and Noisy) generally improve 1-2 points on an average compared to minimal few shot methods.
+Prompt-based fine-tuning outperforms classification fine-tuning (on all tasks and on both pretrained models). Two types of the few-shot methods are considered. The minimal few-shot method has access to a small labeled dataset and semi-supervised few-shot method has access to additional unlabeled dataset. Semi supervised few-shot methods(i.e., iPET and Noisy) generally improve 1-2 points on an average compared to minimal few shot methods.
 
 **Finding 3:** The benefits of various methods are largely complementary. Combining the methods outperforms individual methods and performs very close to a strongly supervised baseline on RoBERTa. However, there is still a significant difference between the best few-shot system and the fully-supervised system.
 
