@@ -23,11 +23,9 @@ The goal is to understand examples of several state-of-the-art techniques and da
 
 # Background
 ## What is Few-Shot learning?
-
 Pre-trained models have been demonstrated to generalize well to a new tasks in a given domain or modality. A machine learning framework called Few-Shot learning(FSL) enables a pre-trained model to generalize over new types of data(data that a pre-trained model has not seen during training) using only fewer labeled samples. This comes under the category of meta learing.
 
 ## Why Few-Shot learning?
-
 The process of collecting, annotating and validating the large amount of data is very expensive. And also there are times businesses do not have access to huge amounts of data and must depend on a small number of samples to produce the results. 
 Few-Shot learning resolves the above mentioned problems in the following ways.
 1. Concern of huge numbers of data is eliminated by generalizing only a few labeled samples.
