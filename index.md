@@ -17,7 +17,7 @@ Pre-trained models have been demonstrated to generalize well to a new tasks in a
 
 ## Why Few-Shot learning?
 
-The process of collecting, annotating and validating the large amount of data is very expensive. And also there are times businesses do not have access to huge data and must depend on a small number of samples to produce the results. 
+The process of collecting, annotating and validating the large amount of data is very expensive. And also there are times businesses do not have access to huge amounts of data and must depend on a small number of samples to produce the results. 
 Few-Shot learning resolves the above mentioned problems in the following ways.
 1. Concern of huge numbers of data is eliminated by generalizing only a few labeled samples.
 2. Using the pretrained models, which is already trained on an extensive dataset, saves a lot of computational power and resources.
