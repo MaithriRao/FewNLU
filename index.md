@@ -75,7 +75,7 @@ Increasing K has no effect on the number of Multi-Split training and development
 
 ![screenshot](Desiderata.png)
 # Summary of Findings
-**Finding 1:** Compared to several baselines, the newly presented Multi-Splits is a more trustworthy approach with improvements in test performance, correlation between development and test sets, and stability relative to the number of runs. This proves that the proposed method can appropriately choose the hyper parameter based on the dev set without overfitting, and minimizing the impact of randomness as much as possible.
+**Finding 1:** Compared to several baselines, the newly presented Multi-Splits is a more trustworthy approach with improvements in test performance, correlation between development and test sets, and stability relative to the number of runs. This proves that the proposed method can appropriately choose the hyper parameter based on the development set without overfitting, and minimizing the impact of randomness as much as possible.
 
 **Finding 2:** It is observed that the benefits of some fes-shot methods(e.g., ADAPET) decrease on larger pretrained models like DeBERTa.
 Two types of the few shot methods are considered. The minimal few-shot method has access to a small labeled dataset and semi-supervised few-shot method has access to additional unlabeled dataset. Semi supervised few-shot methods(i.e., iPET and Noisy) generally improve 1-2 points on an average compared to minimal few shot methods.
