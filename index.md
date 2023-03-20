@@ -58,7 +58,7 @@ The new data split strategy called Multi-Splits(MS), here the labeled data set i
 # Main Results and Analysis
 
 Evaluation of different data split strategies are performed on the FewGLUE benchmark. In the paper authors[(Schick and
-Schütze, 2021b)](https://arxiv.org/pdf/2109.12742.pdf) have assessed approaches based on the frequently applied prompt-based few-shot PET method taking DeBERTa as the base model.  Throughout the experiment learning rate, evaluation ratio, prompt pattern and maximum training step, hyperparameters are considered and are run on the same set of tasks. 
+Schütze, 2021b)](https://arxiv.org/pdf/2009.07118.pdf) have assessed approaches based on the frequently applied prompt-based few-shot PET method taking DeBERTa as the base model.  Throughout the experiment learning rate, evaluation ratio, prompt pattern and maximum training step, hyperparameters are considered and are run on the same set of tasks. 
 
 **Test Performance and correlation:**
 Multi-Splits outperforms all other existing data split strategies in terms of average test performance and as well as average correlation. 
