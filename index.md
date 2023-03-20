@@ -11,6 +11,17 @@ This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods
 ## Goal of this post: 
 The goal is to understand examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
 
+## Outline of this Blog Post
+
+1. **Background** 
+2. **The problem with the existing evaluation method**
+3. **Proposed method**
+4. **Main results and analysis**
+5. **Limitations**
+6. **Conclusion**
+7. **References**
+
+# Background
 ## What is Few-Shot learning?
 
 Pre-trained models have been demonstrated to generalize well to a new tasks in a given domain or modality. A machine learning framework called Few-Shot learning(FSL) enables a pre-trained model to generalize over new types of data(data that a pre-trained model has not seen during training) using only fewer labeled samples. This comes under the category of meta learing.
@@ -28,18 +39,7 @@ Some of the applications of few-shot learning are in the task of computer vision
 Prompting, popularized by GPT-3, has surfaced as a viable alternative input format for NLP models. Prompts typically include a pattern that asks the model to make a certain prediction and a verbalizer that converts the prediction to a class label. Many methods, including PET, iPET, and AdaPET, leverage prompts for few-shot learning.
 
 ## Why Benchmarking?
-
 Benchmarking and evaluation are the backbones of scientific advancement in machine learning and natural language processing. It is impossible to make genuine progress or avoid overfitting to established datasets and metrics without precise and reliable benchmarks. New evaluation procedures have been developed in order to compare models reliably in a few-shot setting.
-
-## Outline of this Blog Post
-
-1. **The problem with the existing evaluation method**
-2. **Background**
-3. **Proposed method**
-4. **Main results and analysis**
-5. **Limitations**
-6. **Conclusion**
-7. **References**
 
 # The problem with the existing evaluation method
 Prior work focussed on evaluating performance on different sets of protocols. One of them was using prefixed hyper parameters. But this has caused the risk of overestimation. Another approach was to evaluate using a small development set to select hyper parameters. But the problem with this is, splitting the small development set was unknown and at the same time not knowing which  data split strategy has made a huge difference.
