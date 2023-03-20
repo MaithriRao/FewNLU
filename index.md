@@ -9,7 +9,7 @@ tags: [natural-language-processing, Few-shot-learning] #Learning from Demonstrat
 This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). 
 
 <style>
-border: none!important;
+border-bottom: none
 </style>
 
 ## Goal of this blog post: 
