@@ -49,7 +49,7 @@ In order to overcome this problem the authors [et.al[1]](https://arxiv.org/pdf/2
 
 *Test set performance of the selected hyper-parameters:* A good data split strategy must select a hyperparameter inorder to achieve a good test performance. 
 
-*Correlation between development set and true test set performance:* As the small development set is used for the model selection, it is important to obtain a high correlation between the performances on the small development set over distribution of hyper parameters.
+*Correlation between development set and true test set performance:* As the small development set is used for the model selection, it is important to obtain a high correlation between the performances on the small development set and test set over distribution of hyper parameters.
 
 *Stability with respect to number of runs K:* Choosing the value of K should have minimum effect on the above two metrics i.e. performance and correlation. This effect is discussed in the coming section with the graph of standard deviation on different sets of hyper parameters.
 
