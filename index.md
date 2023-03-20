@@ -60,7 +60,7 @@ The new data split strategy called Multi-Splits(MS), here the labeled data set i
 Evaluation of different data split strategies are performed on the FewGLUE benchmark. In the paper the authors have assessed approaches based on the frequently applied prompt-based few-shot PET method taking DeBERTa as the base model.  Throughout the experiment learning rate, evaluation ratio, prompt pattern and maximum training step, hyperparameters are considered and are run on the same set of tasks. 
 
 **Test Performance and correlation:**
-Multi splits outperforms all other existing data split strategies in terms of average test performance and as well as average correlation. 
+Multi-Splits outperforms all other existing data split strategies in terms of average test performance and as well as average correlation. 
 Multi-Splits with the  fewer labeled training  samples, performs better than both CV and MDL having more training data. At the same time CV and MDL with fewer validation data has a poor correlation compared to Multi-Splits having more validation data. Hence it is proved that selection of models plays an important role in achieving the best performance than the number of training data.
 
 Duplicating the training data has an adverse effect on the test performance. Though MS and BAG use the same number of training data, MS achieves better performance. This is due to the fact that  BAG contais duplicate training data.
@@ -94,7 +94,7 @@ According to [Mosbach et al.(2021)](https://arxiv.org/pdf/2006.04884.pdf) longer
 Authors et.al proposed two ensemble models ENSEMBLE<sub>prediction</sub> and ENSEMBLE<sub>parameter</sub>. In ENSEMBLE<sub>prediction</sub>, ensembling the logits of different runs are taken while in ENSEMBLE<sub>parameter</sub> the average parameters of different runs is taken. ENSEMBLE<sub>prediction</sub> and ENSEMBLE<sub>parameter</sub> both found to improve performance and stability.
 
 # Conclusion
-The [paper](https://arxiv.org/pdf/2109.12742.pdf) introduces an evaluation framework that improves previous evaluation procedures in terms of test performance, dev-test correlation, and stability. Although this evaluation frameowrk found to be the best while the results are strikingly good, there is always room for improvement. So, fixed hyper-parameters are not optimal and need to re-select them given new conditions. It is important for the community to iterate and converge to a common evaluation framework. The study of few-shot natural language generation might also be studied in a similar framework.
+The blog post  provides a better understanding of an evaluation framework that improves previous evaluation procedures in terms of test performance, dev-test correlation, and stability. And also introduces new data split strategy called Multi-Splits and outperfroms all other existing data split strategies. Although this evaluation frameowrk found to be the best and the results are strikingly good, there is always a room for improvement. So, fixed hyper-parameters are not optimal and need to re-select them given new conditions. It is important for the community to iterate and converge to a common evaluation framework. The study of few-shot natural language generation might also be studied in a similar framework.
 
 # References
 
