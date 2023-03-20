@@ -67,6 +67,8 @@ Duplicating the training data has an adverse effect on the test performance. Tho
 
 Comparing RAND to MS, both have the same number of training and development data, but still MS outperforms RAND. This is again due to the fact that there can be duplication of data and this causes the model to memorize the data too well, achieving poor test performance. At the same time MI also suffers from overfitting.
 
+![screenshot](Test performance and correlation.png)
+
 **Stability w.r.t. the number of runs K:**
 The performance and correlation of Multi-Splits(blue lines) is the most stable while other strategies CV and MDL are more susceptible to the selection of  K. This is mainly due to the fact that Multi-Splits depicts strategies with a fixed ratio and an independent K while both CV and MDL both represent strategies whose number of runs are correlated with the size of the data split. 
 
