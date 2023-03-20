@@ -94,7 +94,7 @@ According to [Mosbach et al.(2021)](https://arxiv.org/pdf/2006.04884.pdf) longer
 Authors et.al proposed two ensemble models ENSEMBLE<sub>prediction</sub> and ENSEMBLE<sub>parameter</sub>. In ENSEMBLE<sub>prediction</sub>, ensembling the logits of different runs are taken while in ENSEMBLE<sub>parameter</sub> the average parameters of different runs is taken. ENSEMBLE<sub>prediction</sub> and ENSEMBLE<sub>parameter</sub> both found to improve performance and stability.
 
 # Conclusion
-The paper introduces an evaluation framework that improves previous evaluation procedures in terms of test performance, dev-test correlation, and stability. Although this method found be the best there is always room for improvement. So, fixed hyper-parameters are not optimal and need to re-select them given new conditions. It is important for the community to iterate and converge on a common evaluation framework. The study of few-shot natural language generation might also be studied in a similar framework.
+The [paper](https://arxiv.org/pdf/2109.12742.pdf) introduces an evaluation framework that improves previous evaluation procedures in terms of test performance, dev-test correlation, and stability. Although this evaluation frameowrk found to be the best while the results are strikingly good, there is always room for improvement. So, fixed hyper-parameters are not optimal and need to re-select them given new conditions. It is important for the community to iterate and converge to a common evaluation framework. The study of few-shot natural language generation might also be studied in a similar framework.
 
 # References
 
