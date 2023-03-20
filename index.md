@@ -87,7 +87,7 @@ Two types of the few-shot methods are considered. The minimal few-shot method ha
 *FewNLU Toolkit:*
 FewNLU is an integrated toolkit developed for few-shot NLU and is made available to the public. It consists of implementations of state-of-the-art few-shot methods, data utilities, a standardized few-shot training framework, and proposed evaluation framework.
 
-# Problems of this paper
+# Limitations
 In recent years pretraining and fine tuning along with prompting found to be the de facto solution to many of the few-shot nlp problems. The entire post is based on prompt based fine tuning. But few-shot prompt based fine tuning suffers from high variance across different training sets and different finetuning runs. Few-shot finetuning shows training instability, but in a cross-validation scenario the experiments have different training sets. The entire blog post does not discuss how much instability comes from training vs. data selection. The author of the paper [MEAL: Stable and Active Learning for Few-Shot Prompting](https://arxiv.org/pdf/2211.08358.pdf) has shown that run instability is a serious issue in the few-shot classification and proposed ensemble technique to improve run stability.
 
 According to [Mosbach et al.(2021)](https://arxiv.org/pdf/2006.04884.pdf) longer training with lower learning rate and warmup, enhances the stability of finetuning of PLM’s, and the main goal is to keep models out of suboptimal training loss regions. But, this is not true in few-shot prompt tuning because, as the number of training examples is low finetuning achieves nearly zero training loss. It has also been demonstrated that while longer training reduces the standard deviation between different runs, it causes lower accuracy for majority of the tasks.
