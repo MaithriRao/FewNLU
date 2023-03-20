@@ -6,7 +6,7 @@ tags: [natural-language-processing, Few-shot-learning] #Learning from Demonstrat
 ---
 **March 2023,**  **Kavu Maithri Rao**
 
-This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). The authors of the paper introduces an evaluation framework for few-shot NLU, and uses comprehensive experiments to justify the choices of data split construction and hyper-parameter search space formulation.
+This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). The authors of the paper introduced an evaluation framework for few-shot NLU, and used comprehensive experiments to justify the choices of data split construction and hyper-parameter search space formulation.
 
 ## Goal of this blog post: 
 The goal is to understand examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
