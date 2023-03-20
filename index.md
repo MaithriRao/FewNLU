@@ -8,6 +8,10 @@ tags: [natural-language-processing, Few-shot-learning] #Learning from Demonstrat
 
 This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). 
 
+<style>
+border: none!important;
+</style>
+
 ## Goal of this blog post: 
 The goal is to understand examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
 
