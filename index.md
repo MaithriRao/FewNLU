@@ -5,11 +5,12 @@ author: Kavu Maithri Rao
 tags: [natural-language-processing, Few-shot-learning] #Learning from Demonstration]
 ---
 
-March 2023, Kavu Maithri Rao
+*March 2023,*  *Kavu Maithri Rao*
+
 This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). 
 
 ## Goal of this post: 
-This post includes examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
+The goal is to understand examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
 
 ## What is Few-Shot learning?
 
