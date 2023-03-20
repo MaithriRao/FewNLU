@@ -36,9 +36,9 @@ Benchmarking and evaluation are the backbones of scientific advancement in machi
 1. **The problem with the existing evaluation method**
 2. **Background**
 3. **Proposed method**
-4. **Results and analysis**
+4. **Main results and analysis**
 5. **Limitations**
-6. **conclusion**
+6. **Conclusion**
 7. **References**
 
 Prior work focussed on evaluating performance on different sets of protocols. One of them was using prefixed hyper parameters. But this has caused the risk of overestimation. Another approach was to evaluate using a small development set to select hyper parameters. But the problem with this is, splitting the small development set was unknown and at the same time not knowing which  data split strategy has made a huge difference.
