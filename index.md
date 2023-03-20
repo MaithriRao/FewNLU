@@ -40,7 +40,7 @@ Prompting, popularized by GPT-3, has surfaced as a viable alternative input form
 Benchmarking and evaluation are the backbones of scientific advancement in machine learning and natural language processing. It is impossible to make genuine progress or avoid overfitting to established datasets and metrics without precise and reliable benchmarks. New evaluation procedures have been developed in order to compare models reliably in a few-shot setting.
 
 # The problem with the existing evaluation method
-Prior work focussed on evaluating performance on different sets of protocols. One of them was using prefixed hyper parameters. But this has caused the risk of overestimation. Another approach was to evaluate using a small development set to select hyper parameters. But the problem was splitting the small development set was unknown and at the same time not knowing which  data split strategy has made a huge difference.
+Prior work focussed on evaluating performance on different sets of protocols. One of them was using prefixed hyper parameters. But this has caused the risk of overestimation. Another approach was to evaluate using a small development set to select hyper parameters. But the problem was splitting the small development set was unknown and at the same time not knowing which  data split strategy to use has made a huge difference.
 In order to overcome this problem the authors [et.al[1]](https://arxiv.org/pdf/2109.12742.pdf) proposed an evaluation framework for few-shot NLUs. This framework for evaluation comprises repeated processes starting from selecting a hyperparameter to selecting a data split and then training and evaluating the model. It is essential to identify a critical design decision in order to establish a strong evaluation structure, and one such decision is constructing the data splits for model selection. A new data split strategy called “Multi-Splits”. In Multi-Splits strategy is proposed, where the available labeled samples are randomly split into development  and training sets multiple times and later subsequently combining the outcomes of each data splits.
 
 # Proposed method
@@ -48,6 +48,7 @@ In order to overcome this problem the authors [et.al[1]](https://arxiv.org/pdf/2
 
 *Test set performance of the selected hyper-parameters:* A good data split strategy must select a hyperparameter inorder to achieve a good test performance. 
 *Correlation between development set and true test set performance:* As the small development set is used for the model selection, it is important to obtain a high correlation between the performances on the small development set over distribution of hyper parameters.
+
 *Stability with respect to number of runs K:* Choosing the value of K should have minimum effect on the above two metrics i.e. performance and correlation. This effect is discussed in the coming section with the graph of standard deviation on different sets of hyper parameters.
 
 The new data split strategy called Multi-Splits(MS), here the labeled data set is randomly divided into training and development sets using a fixed split ratio r. MS is compared with the existing data split strategies such as K-fold cross validation (CV), minimum description length (MDL), and bagging (BAG), random sampling (RAND) and model-informed splitting (MI). 
