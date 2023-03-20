@@ -24,7 +24,7 @@ Few-Shot learning resolves the above mentioned problems in the following ways.
 3. With FSL, models can also learn about uncommon categories of the data with little prior knowledge.
 4. As long as the data in support and query sets are coherent, the model can be applied to  expand to other data domains even if it was pre-trained using a different distribution of data.
 
-Some of the applications of few-shot learning are in the task of computer vision such as image classification, object and character recognition etc and also in the field of natural language processing in the task of translation, sentence completion, word similarity etc and also in the field of Robotics and audio processing and also Healthcare.
+Some of the applications of few-shot learning are in the task of computer vision such as image classification, object and character recognition etc and also in the field of natural language processing such as translation, sentence completion, word similarity etc and also in the field of Robotics and audio processing and also Healthcare.
 Prompting, popularized by GPT-3, has surfaced as a viable alternative input format for NLP models. Prompts typically include a pattern that asks the model to make a certain prediction and a verbalizer that converts the prediction to a class label. Many methods, including PET, iPET, and AdaPET, leverage prompts for few-shot learning.
 
 ## Why Benchmarking?
