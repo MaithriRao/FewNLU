@@ -7,13 +7,13 @@ tags: [natural-language-processing, Few-shot-learning] #Learning from Demonstrat
 
 This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). 
 
-**Goal of this post**: This post includes examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
+## Goal of this post: This post includes examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
 
-# What is Few-Shot learning?
+## What is Few-Shot learning?
 
 Pre-trained models have been demonstrated to generalize well to new tasks in a given domain or modality. A machine learning framework called Few-Shot learning(FSL) enables a pre-trained model to generalize over new types of data(data that a pre-trained model has not seen during training) using only fewer labeled samples. This comes under the category of meta learing.
 
-# Why Few-Shot learning?
+## Why Few-Shot learning?
 
 The process of collecting, annotating and validating the large amount of data is very expensive. And also there are times businesses do not have access to huge data and must depend on a small number of samples to produce the results. 
 Few-Shot learning resolves the above mentioned problems in the following ways.
@@ -25,7 +25,7 @@ Few-Shot learning resolves the above mentioned problems in the following ways.
 Some of the applications of few-shot learning are in the task of computer vision such as image classification, object and character recognition etc and also in the field of natural language processing in the task of translation, sentence completion, word similarity etc and also in the field of Robotics and audio processing and also Healthcare.
 Prompting, popularized by GPT-3, has surfaced as a viable alternative input format for NLP models. Prompts typically include a pattern that asks the model to make a certain prediction and a verbalizer that converts the prediction to a class label. Many methods, including PET, iPET, and AdaPET, leverage prompts for few-shot learning.
 
-# Why Benchmarking?
+## Why Benchmarking?
 
 Benchmarking and evaluation are the backbones of scientific advancement in machine learning and natural language processing. It is impossible to make genuine progress or avoid overfitting to established datasets and metrics without precise and reliable benchmarks. New evaluation procedures have been developed in order to compare models reliably in a few-shot setting.
 
@@ -53,8 +53,7 @@ The new data split strategy called Multi-Splits(MS), here the labeled data set i
 
 Evaluation of different data split strategies are performed on the FewGLUE benchmark. In the paper the authors have assessed approaches based on the frequently applied prompt-based few-shot PET method taking DeBERTa as the base model.  Throughout the experiment learning rate, evaluation ratio, prompt pattern and maximum training step, hyperparameters are considered and are run on the same set of tasks. 
 
-*Test Performance and correlation:*
-
+**Test Performance and correlation:**
 Multi splits outperforms all other existing data split strategies in terms of average test performance and as well as average correlation. 
 Multi-Splits with the  fewer labeled training  samples, performs better than both CV and MDL having more training data. At the same time CV and MDL with fewer validation data has a poor correlation compared to Multi-Splits having more validation data. Hence it is proved that selection of models plays an important role in achieving the best performance than the number of training data.
 
@@ -62,7 +61,7 @@ Duplicating the training data has an adverse effect on the test performance. Tho
 
 Comparing RAND to MS, both have the same number of train and development data data, but still MS outperforms RAND. This is again due to the fact that there can be duplication of data and this causes the model to memorize the data too well, achieving poor test performance. At the same time MI also suffers from overfitting.
 
-*Stability w.r.t. the number of runs K:*
+**Stability w.r.t. the number of runs K:**
 
 The performance and correlation of Multi-Splits(blue lines) is the most stable while other strategies CV and MDL are more susceptible to the selection of  K. This is mainly due to the fact that Multi-Splits depicts strategies with a fixed ratio and an independent K while both CV and MDL both represent strategies whose number of runs are correlated with the size of the data split. On both BoolQ and RTE, Multi-Splits has the lowest variance across various runs. Although MS has a high variance when K = 2, the variance decreases as K increases, whereas CV and MDL have increasing or unstable variance.
 Increasing K has no effect on the number of Multi-Split training and development examples; instead, it increases the confidence in the results. So for Multi-Split, one can always choose to increase the value of K to obtain lower variance. However, for CV and MDL, the sizes of training and development sets are influenced by K, with excessively large K values resulting in a failure mode and extremely small K values resulting in unstable results. Hence it is hard to decide which value of K to choose in advance. All experiments are performed with 64 labeled samples.The above results have yielded four findings.
