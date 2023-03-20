@@ -37,8 +37,9 @@ Benchmarking and evaluation are the backbones of scientific advancement in machi
 2. **Background**
 3. **Proposed method**
 4. **Results and analysis**
-5. **Findings and conclusion**
-6. **References**
+5. **Limitations**
+6. **conclusion**
+7. **References**
 
 Prior work focussed on evaluating performance on different sets of protocols. One of them was using prefixed hyper parameters. But this has caused the risk of overestimation. Another approach was to evaluate using a small development set to select hyper parameters. But the problem with this is, splitting the small development set was unknown and at the same time not knowing which  data split strategy has made a huge difference.
 In order to overcome this problem the authors et.al[1] proposed an evaluation framework for few-shot NLUs. This framework for evaluation comprises repeated processes starting from selecting a hyperparameter to selecting a data split and then training and evaluating the model. It is essential to identify a critical design decision in order to establish a strong evaluation structure, and one such decision is constructing the data splits for model selection. A new data split strategy called “Multi-Splits”. In Multi-Splits strategy is proposed, where the available labeled samples are randomly split into development  and training sets multiple times and later subsequently combining the outcomes of each data splits.
@@ -82,13 +83,13 @@ Two types of the few shot methods are considered. The minimal few-shot method ha
 *FewNLU Toolkit:*
 FewNLU is an integrated toolkit developed for few-shot NLU and is made available to the public. It consists of implementations of state-of-the-art few-shot methods, data utilities, a standardized few-shot training framework, and proposed evaluation framework.
 
-# Conclusion
-Fixed hyper-parameters are not optimal and need to re-select them given new conditions. It is important for the community to iterate and converge on a common evaluation framework. The study of few-shot natural language generation might also be studied in a similar framework.
-
 # Problems of this paper
 In recent years pretraining and fine tuning along with prompting is found to be the de facto solution to many of the few-shot nlp problems. The entire post is based on prompt based fine tuning. But few-shot prompt based fine tuning suffers from high variance across different training sets and different finetuning runs. Few-shot finetuning shows training instability,, but in a cross-validation scenario the experiments have different training sets. The entire blog post does not discuss how much instability comes from training vs. data selection. The author of the paper MEAL: Stable and Active Learning for Few-Shot Prompting  has shown that run instability is a serious issue in the few-shot classification proposed ensemble technique to improve run stability.
 According to Mosbach et al. (2021) longer training with lower learning rate and warmup enhances the stability of finetuning of PLM’s, and the main goal is to keep models out of suboptimal training loss regions. But, this is not true in few-shot prompt tuning because as the number of training examples is low finetuning achieves nearly zero training loss. It has also been demonstrated that while longer training reduces the standard deviation between different runs and also causes lower accuracy for the majority of tasks.
 Authors et.al proposed two ensemble models ENSEMBLE<sub>prediction</sub> and ENSEMBLE<sub>parameter</sub>. In ENSEMBLE<sub>prediction</sub>, ensembling the logits of different runs while in ENSEMBLE<sub>parameter</sub> the average parameters of different runs is taken. ENSEMBLE<sub>prediction</sub> and ENSEMBLE<sub>parameter</sub> both found to improve performance and stability.
+
+# Conclusion
+The paper introduces an evaluation framework that improves previous evaluation procedures in terms of test performance, dev-test correlation, and stability. Although this method found be the best there is always room for improvement. So, fixed hyper-parameters are not optimal and need to re-select them given new conditions. It is important for the community to iterate and converge on a common evaluation framework. The study of few-shot natural language generation might also be studied in a similar framework.
 
 # References
 
