@@ -7,7 +7,8 @@ tags: [natural-language-processing, Few-shot-learning] #Learning from Demonstrat
 
 This blog post is about the paper [FewNLU: Benchmarking State-of-the-Art Methods for Few-Shot Natural Language Understanding](https://arxiv.org/pdf/2109.12742.pdf). 
 
-## Goal of this post: This post includes examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
+## Goal of this post: 
+This post includes examples of several state-of-the-art techniques and data processing, as well as a standard training process and an evaluation framework for few-shot NLU.
 
 ## What is Few-Shot learning?
 
@@ -99,9 +100,11 @@ FewNLU: Benchmarking state-of-the-art methods for few-shot natural language unde
 
 4. [Timo Schick and Hinrich Schütze. 2021b. It’s not just size that matters: Small language models are also few-shot learners. pages 2339–2352](https://arxiv.org/pdf/2009.07118.pdf).
 
-5. [ML and NLP Research Highlights of 2021](https://www.ruder.io/ml-highlights-2021/).
+5. [Abdullatif Köksal, Timo Schick, and Hinrich Schütze.2022. Meal: Stable and active learning for few-shot prompting.](https://arxiv.org/pdf/2211.08358.pdf)
 
-6. [Everything you need to know about Few-Shot Learning](https://blog.paperspace.com/few-shot-learning/).
+6. [ML and NLP Research Highlights of 2021](https://www.ruder.io/ml-highlights-2021/).
 
-7. [What is Few-Shot Learning? Methods & Applications in 2023](https://research.aimultiple.com/few-shot-learning/).
+7. [Everything you need to know about Few-Shot Learning](https://blog.paperspace.com/few-shot-learning/).
+
+8. [What is Few-Shot Learning? Methods & Applications in 2023](https://research.aimultiple.com/few-shot-learning/).
 
